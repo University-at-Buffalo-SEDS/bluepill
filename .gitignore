@@ -1,0 +1,88 @@
+# Generic
+.DS_Store
+# swap/temp files
+*~
+*.swp
+*.swo
+*.tmp
+
+# Build directories
+build/
+Debug/
+Release/
+
+# CMake files and generated build system metadata
+/CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+build.ninja
+rules.ninja
+TargetDirectories.txt
+compile_commands.json
+
+# STM32CubeMX / STM32CubeIDE generated files that are safe to ignore
+*.ioc~
+*.ioc.sw?  # temp
+
+# Binary artifacts
+*.elf
+*.map
+*.bin
+*.hex
+*.axf
+*.o
+*.lst
+
+# Linker and object intermediate files
+*.d
+*.a
+*.lib
+
+# Keil/MDK
+.uvproj*
+.uvopt*
+
+# IDE/editor directories
+.vscode/
+.idea/
+.vscode-test/
+.vscode-server/
+.history/
+.cache/
+
+# Visual Studio
+.vs/
+
+# ST-Link / CubeProgrammer files
+*.stlink
+
+# USB/serial logs, uart capture
+*.log
+
+# Mac-specific
+Icon
+
+# Temp files from various tools
+*.log
+*.bak
+*.orig
+
+# Ignore object files, coverage and temporary files
+*.gcda
+*.gcno
+*.gcov
+
+# Local environment
+.env
+
+# User-specific project files
+*.user
+
+# Coverage reports
+coverage/
+
+# Avoid accidentally committing large binary blobs
+# (uncomment and tune if you store build artifacts in another folder)
+# /artifacts/
+
