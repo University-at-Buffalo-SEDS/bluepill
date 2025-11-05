@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "usb_device.h"
+#include "telemetry.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -99,13 +100,16 @@ int main(void)
   /* USER CODE BEGIN 2 */
   
   /* USER CODE END 2 */
-
+  init_telemetry_router();
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
+
   {
     /* USER CODE END WHILE */
-
+    char data[] = "test";
+    log_telemetry_asynchronous(SEDS_DT_MESSAGE_DATA, data, sizeof(data), sizeof(data)/sizeof(data[0]));
+    process_all_queues_timeout(100);
     /* USER CODE BEGIN 3 */
     HAL_UART_Transmit(&huart1, (uint8_t*)data, sizeof(data), UART_TIMEOUT);
     HAL_Delay(50);

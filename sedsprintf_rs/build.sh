@@ -48,7 +48,7 @@ done
 if [[ "$BUILD_STM" == "ON" ]]; then
   build_args=(
     --no-default-features
-    --target thumbv7em-none-eabihf
+    --target thumbv7m-none-eabi
     --features embedded
   )
 elif [[ "$BUILD_PYTHON" == "ON" ]]; then
